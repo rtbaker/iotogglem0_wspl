@@ -137,9 +137,6 @@ flash: $(PROJECT).bin
 debug: $(PROJECT).elf
 	xterm -e st-util &
 	$(GDBTUI) --eval-command="target remote localhost:4242" $(PROJECT).elf
-
-erase:
-	st-flash write  
 		
 clean:
 	-rm -rf $(OBJS)
