@@ -1,10 +1,10 @@
 /**
   ******************************************************************************
-  * @file    Templates/Inc/stm32f0xx_it.h 
+  * @file    Templates/Inc/main.h 
   * @author  MCD Application Team
   * @version V1.6.0
   * @date    27-May-2016
-  * @brief   This file contains the headers of the interrupt handlers.
+  * @brief   Header for main.c module
   ******************************************************************************
   * @attention
   *
@@ -34,31 +34,20 @@
   *
   ******************************************************************************
   */
-
+  
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __STM32F0xx_IT_H
-#define __STM32F0xx_IT_H
-
-#ifdef __cplusplus
- extern "C" {
-#endif 
+#ifndef __MAIN_H
+#define __MAIN_H
 
 /* Includes ------------------------------------------------------------------*/
+#include "stm32f0xx_hal.h"
+#include "stm32f072b_discovery.h"
+
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/
 /* Exported functions ------------------------------------------------------- */
 
-void NMI_Handler(void);
-void HardFault_Handler(void);
-void SVC_Handler(void);
-void PendSV_Handler(void);
-void SysTick_Handler(void);
-
-#ifdef __cplusplus
-}
-#endif
-
-#endif /* __STM32F0xx_IT_H */
+#endif /* __MAIN_H */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
